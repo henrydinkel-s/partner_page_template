@@ -1,0 +1,490 @@
+/* ==========================================================================
+   Colours
+   ========================================================================== */
+
+//Putty
+$putty: #f3f0ec;
+
+//Purples
+$purple: #8223fa;
+$darkest-purple: #38005c;
+$darker-purple: #4a0983;
+$dark-purple: #6c18cb;
+$light-purple: #994bfb;
+$lighter-purple: #c69afd;
+$lightest-purple: #f3e9ff;
+
+//Mono
+$white: #ffffff;
+$black: #000000;
+$mono-darker: #26212f;
+$mono-dark: #3f384c;
+$mono-medium: #726a82;
+$mono-light: #d8d4e0;
+$mono-lighter: #f2f1f5;
+
+/* ==========================================================================
+   Base styles
+   ========================================================================== */
+
+// Mobile width
+$mob-width: 400px;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'italian_plate_no1_expandedRg', sans-serif;
+  font-size: 62.5%;
+  color: $mono-dark;
+}
+
+body {
+  background: $putty;
+  position: reletive;
+  font-size: 14px;
+  line-height: 18px;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+}
+
+// Selection
+::-moz-selection {
+  background: $lightest-purple;
+  text-shadow: none;
+}
+
+::selection {
+  background: $lightest-purple;
+  text-shadow: none;
+}
+
+// Media
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+img {
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+//Headings function
+@function headings($from: 1, $to: 6) {
+  @if $from == $to {
+    @return 'h#{$from}';
+  } @else {
+    @return 'h#{$from},' + headings($from + 1, $to);
+  }
+}
+
+//Headings
+#{headings(1,6)} {
+  margin: 0;
+}
+
+h1 {
+  font-family: 'italian_plate_no1_expandedXBd', sans-serif;
+  font-size: 3.1rem;
+  line-height: 4rem;
+  margin-bottom: 16px;
+  color: $darker-purple;
+}
+
+h2 {
+  font-family: 'italian_plate_no1_expandedBd', sans-serif;
+  font-size: 2.5rem;
+  line-height: 3.2rem;
+  margin-bottom: 16px;
+}
+
+h3 {
+  font-family: 'italian_plate_no1_expandedBd', sans-serif;
+  font-size: 2.1rem;
+  line-height: 2.8rem;
+}
+
+h4 {
+  font-family: 'italian_plate_no1_expandedRg', sans-serif;
+  font-size: 1.9rem;
+  line-height: 2.6rem;
+}
+h4 span {
+  font-family: 'italian_plate_no1_expandedXBd', sans-serif;
+}
+
+h5 {
+  font-family: 'italian_plate_no1_expandedRg', sans-serif;
+  font-size: 1.7rem;
+  line-height: 2.4rem;
+}
+h5 span {
+  font-family: 'italian_plate_no1_expandedXBd', sans-serif;
+}
+
+p {
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  margin: 0px;
+  color: $mono-dark;
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+button {
+  cursor: pointer;
+  font-family: 'italian_plate_no1_expandedBd', sans-serif;
+  font-size: 1.5rem;
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+//Purple
+.primary-btn {
+  background: $purple;
+  border: none;
+  margin-top: 32px;
+  padding: 16px 24px;
+  color: $white;
+}
+
+.secondary-btn {
+  background: $white;
+  height: 48px;
+  padding: 8px 24px;
+  color: $purple;
+  border: 2px solid $purple;
+}
+
+.tertiary-btn {
+  border: none;
+  background: none;
+  height: 48px;
+  margin-top: 8px;
+  padding: 8px 24px;
+  color: $purple;
+}
+
+//White
+.secondary-btn-white {
+  border: none;
+  background: none;
+  height: 48px;
+  padding: 8px 24px;
+  color: $white;
+  border: 2px solid $white;
+}
+
+.tertiary-btn-white {
+  border: none;
+  background: none;
+  height: 48px;
+  margin-top: 8px;
+  padding: 8px 24px;
+  color: $white;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.brand-title {
+  font-family: 'italian_plate_no1_expandedBd', sans-serif;
+  max-width: $mob-width;
+  padding-top: 44px;
+  opacity: 0;
+  color: $darker-purple;
+  text-align: center;
+  position: fixed;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  font-size: 1.9rem;
+
+  animation: fade 1s linear;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -2.8s);
+
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+.arrow {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  margin-top: 16px;
+  margin-left: 16px;
+  background-color: $white;
+  border-radius: 12px;
+  z-index: 3;
+
+  animation: move 1s linear;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -2.8s);
+
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+.arrow i {
+  color: $purple;
+  font-size: 20px;
+}
+
+//Mask
+
+.mask {
+  max-width: $mob-width;
+  height: 24px;
+  position: fixed;
+  background-color: $putty;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+
+  animation: scale 1s linear;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -2.8s);
+
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+.inverted-border-radius-l {
+  position: relative;
+  height: 100%;
+  width: 50%;
+  background-color: $putty;
+  display: inline-block;
+}
+
+.inverted-border-radius-l::before {
+  content: '';
+  position: absolute;
+
+  background-color: transparent;
+  bottom: -50px;
+  height: 50px;
+  width: 24px;
+  border-top-left-radius: 24px;
+  box-shadow: 0 -24px 0 0 $putty;
+}
+
+.inverted-border-radius-r {
+  position: relative;
+  height: 100%;
+  width: 50%;
+  background-color: $putty;
+  float: right;
+}
+
+.inverted-border-radius-r::before {
+  content: '';
+  position: absolute;
+  background-color: transparent;
+  bottom: -50px;
+  right: 0px;
+  height: 50px;
+  width: 24px;
+  border-top-right-radius: 24px;
+  box-shadow: 0 -24px 0 0 $putty;
+}
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
+main {
+  max-width: $mob-width;
+  margin: 24px auto;
+}
+
+.content-card {
+  border-radius: 24px;
+  background: $white;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+.content {
+  width: 100%;
+  text-align: center;
+  padding: 24px 24px;
+}
+
+.section-title {
+  margin-top: 56px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+//Card content
+.brand-mark {
+  max-width: 50%;
+  margin: 16px 0;
+}
+
+.hero-image {
+  width: 100%;
+  padding-bottom: 100%;
+  position: relative;
+  background-color: #2980b9;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.article-image {
+  width: 100%;
+  height: auto;
+}
+
+// Tabs
+
+label {
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  display: inline-block;
+  color: $lighter-purple;
+}
+
+input[type='radio'] {
+  display: none;
+}
+
+label.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-bottom: 2px solid $lighter-purple;
+  user-select: none;
+  padding-left: 0;
+  input[type='radio']:checked + .tab-page + & {
+    border-bottom: 2px solid $white;
+    font-weight: bold;
+    color: $white;
+  }
+}
+
+// Tab content
+
+.content-tabs {
+  border-radius: 24px;
+  background: $darker-purple;
+  margin-bottom: 16px;
+  overflow: hidden;
+  display: grid;
+  width: 100%;
+  height: auto;
+  padding-top: 16px;
+  grid-template-rows: 48px 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.tab-page > .content {
+  background: $darker-purple;
+  color: $white;
+  height: 100%;
+  position: relative;
+  border-bottom-right-radius: 24px;
+  border-bottom-left-radius: 24px;
+}
+
+.tab-page ul {
+  text-align: left;
+  padding: 0;
+  margin-top: 40px;
+  list-style: none;
+}
+.tab-page ul li {
+  padding: 16px;
+  background: $white;
+  margin-bottom: 8px;
+  border-radius: 12px;
+}
+.tab-page ul li p span {
+  color: $dark-purple;
+  font-family: 'italian_plate_no1_expandedBd', sans-serif;
+}
+
+.spend {
+  margin-right: 24px;
+}
+.collect {
+  margin-left: 24px;
+}
+
+.tab-page {
+  grid-column-start: 1;
+  grid-row-start: 2;
+  grid-column-end: span 2;
+  display: flex;
+  align-items: flex-start;
+}
+
+input[type='radio'] + .tab-page {
+  transition: transform 0.2s;
+  transform: translateX(100%);
+}
+
+input[type='radio']:checked + .tab-page {
+  transform: translateX(0%);
+  .content > * {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* ==========================================================================
+   Animation
+   ========================================================================== */
+
+// Mask scale animation
+@keyframes scale {
+  to {
+    height: 78px;
+  }
+}
+
+// Arrow move animation
+@keyframes move {
+  to {
+    margin-top: 0px;
+    margin-left: 0px;
+    background: none;
+  }
+}
+
+// Title fadeIn animation
+@keyframes fade {
+  to {
+    opacity: 1;
+    padding-top: 38px;
+  }
+}

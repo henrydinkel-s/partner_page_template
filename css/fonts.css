@@ -1,0 +1,43 @@
+/* Extrabold */
+
+@font-face {
+    font-family: 'italian_plate_no1_expandedXBd';
+    src: url('../fonts/italianplateno1expanded-extrabold-webfont.woff2') format('woff2'),
+         url('../fonts/italianplateno1expanded-extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Bold */
+
+@font-face {
+    font-family: 'italian_plate_no1_expandedBd';
+    src: url('../fonts/italianplateno1expanded-bold-webfont.woff2') format('woff2'),
+         url('../fonts/italianplateno1expanded-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Regular */
+
+@font-face {
+    font-family: 'italian_plate_no1_expandedRg';
+    src: url('../fonts/italianplateno1expanded-regular-webfont.woff2') format('woff2'),
+         url('../fonts/italianplateno1expanded-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Medium */
+
+@font-face {
+    font-family: 'italian_plate_no1_expandedMd';
+    src: url('../fonts/italianplateno1expanded-medium-webfont.woff2') format('woff2'),
+         url('../fonts/italianplateno1expanded-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
