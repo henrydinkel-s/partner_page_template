@@ -1,0 +1,1 @@
+# partner_page_template
