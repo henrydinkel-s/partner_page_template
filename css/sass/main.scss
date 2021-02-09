@@ -424,12 +424,19 @@ label.nav {
 }
 
 .tab-page > .content {
-  background: $darker-purple;
   color: $white;
   height: 100%;
   position: relative;
   border-bottom-right-radius: 24px;
   border-bottom-left-radius: 24px;
+  display: flex;
+  flex-flow: wrap;
+  align-content: space-between;
+  justify-content: center;
+}
+
+.tab-page > .content > div {
+  width: 100%;
 }
 
 .tab-page ul {
