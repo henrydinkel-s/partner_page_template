@@ -329,6 +329,7 @@ button {
   padding: 0 $mob-margin;
   margin-bottom: 48px;
   overflow: auto;
+  overflow-x: hidden;
 }
 
 main {

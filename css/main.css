@@ -301,6 +301,7 @@ button {
   padding: 0 16px;
   margin-bottom: 48px;
   overflow: auto;
+  overflow-x: hidden;
 }
 
 main {
