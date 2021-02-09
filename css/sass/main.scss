@@ -29,6 +29,8 @@ $mono-lighter: #f2f1f5;
 
 // Mobile width
 $mob-width: 400px;
+// Mobile margin
+$mob-margin: 16px;
 
 * {
   box-sizing: border-box;
@@ -45,7 +47,6 @@ body {
   position: reletive;
   font-size: 14px;
   line-height: 18px;
-  padding: 16px 0;
 
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
@@ -317,6 +318,10 @@ button {
    Content
    ========================================================================== */
 
+.wrapper {
+  margin: 0 $mob-margin;
+}
+
 main {
   max-width: $mob-width;
   margin: 24px auto;
@@ -325,7 +330,7 @@ main {
 .content-card {
   border-radius: 24px;
   background: $white;
-  margin-bottom: 16px;
+  margin-bottom: $mob-margin;
   overflow: hidden;
 }
 .content {
@@ -398,7 +403,7 @@ label.nav {
 .content-tabs {
   border-radius: 24px;
   background: $darker-purple;
-  margin-bottom: 16px;
+  margin-bottom: $mob-margin;
   overflow: hidden;
   display: grid;
   width: 100%;

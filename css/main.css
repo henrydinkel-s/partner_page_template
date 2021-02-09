@@ -20,7 +20,6 @@ body {
   position: reletive;
   font-size: 14px;
   line-height: 18px;
-  padding: 16px 0;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   -o-font-smoothing: antialiased;
@@ -291,6 +290,10 @@ button {
 /* ==========================================================================
    Content
    ========================================================================== */
+.wrapper {
+  margin: 0 16px;
+}
+
 main {
   max-width: 400px;
   margin: 24px auto;
