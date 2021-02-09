@@ -9,16 +9,15 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/icon.css">
     <!-- Styles -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
     <!-- Scripts -->
     <script src="js/main.js" defer></script>
 
 </head>
+
 <body>
-    
-</body>
-</html>
 
 <div class="brand-title">
   Sainsbury's
@@ -33,7 +32,6 @@
 </div>
 
 <main class="main">
-
   <div class="arrow">
     <i class="icon-arrow-left"></i>
   </div>
@@ -106,24 +104,59 @@
     <label class="nav spend" for="spend">Spend</label>
   </div>
 
-<!-- Hero card -->
+  <!-- Article card -->
 
-<div class="section-title">
-    <h2>More from Sainsbury's</h2>
-</div>
+  <div class="section-title">
+      <h2>More from Sainsbury's</h2>
+  </div>
 
-<div class="content-card">
-    <div class="article-image">
-        <img src="https://cdn.nectar.com/binaries/content/gallery/nectarwebsite/brand-images/sponsors/sainsburys/sainsburysheader-3000x1687.jpg"
-            alt="" width="100%">
-    </div>
+  <div class="content-card">
+      <div class="article-image">
+          <img src="https://cdn.nectar.com/binaries/content/gallery/nectarwebsite/brand-images/sponsors/sainsburys/sainsburysheader-3000x1687.jpg"
+              alt="" width="100%">
+      </div>
 
-    <div class="content">
-        <h5>Scan bag and go with our SmartShop app</h5>
-        <p>Explore some of our most popular destinations and start planning your trip to Bath, Bristol and beyo ...</p>
-        <button class="tertiary-btn underline-cta">Read more</button>
-    </div>
-</div>
+      <div class="content">
+          <h5>Scan bag and go with our SmartShop app</h5>
+          <p>Explore some of our most popular destinations and start planning your trip to Bath, Bristol and beyo ...</p>
+          <button class="tertiary-btn underline-cta">Read more</button>
+      </div>
+  </div>
+
+<!-- More brands -->
+
+  <div class="section-title">
+    <h2>Similar Partners</h2>
+  </div>
+
+  <div class="partner-slider">
+    <div class="box"><img src="img/brand-argos.svg" alt=""></div>
+    <div class="box"><img src="img/brand-ebay.svg" alt=""></div>
+    <div class="box"><img src="img/brand-esso.svg" alt=""></div>
+    <div class="box"><img src="img/brand-sky.svg" alt=""></div>
+  </div>
 
 </main>
 </div>
+
+
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('.partner-slider').slick({
+      infinite: false,
+      slidesToShow: 2,
+      arrows: false,
+      centerMode: false,
+      variableWidth: true
+    });
+  });
+</script>
+
+</body>
+</html>
+
+

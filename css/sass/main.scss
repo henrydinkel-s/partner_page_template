@@ -327,6 +327,7 @@ button {
 
 .wrapper {
   margin: 0 $mob-margin;
+  margin-bottom: 48px;
 }
 
 main {
@@ -355,7 +356,7 @@ main {
 
 //Card content
 .brand-mark {
-  max-width: 50%;
+  max-width: 45%;
   margin: 16px 0;
 }
 
@@ -473,6 +474,33 @@ input[type='radio']:checked + .tab-page {
     opacity: 1;
     transform: translateY(0px);
   }
+}
+
+// Partner slider
+.partner-slider {
+  max-width: 100%;
+}
+
+.slick-list {
+  overflow: visible;
+}
+
+.box {
+  width: 180px;
+  height: 180px;
+  background: $white;
+  border-radius: 24px;
+  margin: 0 8px;
+  position: relative;
+}
+
+.box img {
+  width: 100%;
+  padding: 0 32px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
 }
 
 /* ==========================================================================

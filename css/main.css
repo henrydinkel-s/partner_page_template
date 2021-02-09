@@ -299,6 +299,7 @@ button {
    ========================================================================== */
 .wrapper {
   margin: 0 16px;
+  margin-bottom: 48px;
 }
 
 main {
@@ -327,7 +328,7 @@ main {
 }
 
 .brand-mark {
-  max-width: 50%;
+  max-width: 45%;
   margin: 16px 0;
 }
 
@@ -474,6 +475,32 @@ input[type='radio']:checked + .tab-page .content > * {
   opacity: 1;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
+}
+
+.partner-slider {
+  max-width: 100%;
+}
+
+.slick-list {
+  overflow: visible;
+}
+
+.box {
+  width: 180px;
+  height: 180px;
+  background: #ffffff;
+  border-radius: 24px;
+  margin: 0 8px;
+  position: relative;
+}
+
+.box img {
+  width: 100%;
+  padding: 0 32px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
 }
 
 /* ==========================================================================
