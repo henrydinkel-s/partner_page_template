@@ -326,8 +326,9 @@ button {
    ========================================================================== */
 
 .wrapper {
-  margin: 0 $mob-margin;
+  padding: 0 $mob-margin;
   margin-bottom: 48px;
+  overflow: auto;
 }
 
 main {
@@ -486,8 +487,8 @@ input[type='radio']:checked + .tab-page {
 }
 
 .box {
-  width: 180px;
-  height: 180px;
+  width: 150px;
+  height: 150px;
   background: $white;
   border-radius: 24px;
   margin: 0 8px;

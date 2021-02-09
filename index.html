@@ -151,7 +151,15 @@
       slidesToShow: 2,
       arrows: false,
       centerMode: false,
-      variableWidth: true
+      variableWidth: true,
+      responsive: [
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+          }
+        }
+      ]
     });
   });
 </script>
