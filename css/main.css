@@ -82,6 +82,7 @@ h4 {
   font-family: 'italian_plate_no1_expandedRg', sans-serif;
   font-size: 1.9rem;
   line-height: 2.6rem;
+  margin-bottom: 8px;
 }
 
 h4 span {
@@ -92,6 +93,7 @@ h5 {
   font-family: 'italian_plate_no1_expandedRg', sans-serif;
   font-size: 1.7rem;
   line-height: 2.4rem;
+  margin-bottom: 8px;
 }
 
 h5 span {
@@ -115,6 +117,10 @@ button {
   width: 100%;
   display: block;
   border-radius: 12px;
+}
+
+.underline-cta {
+  text-decoration: underline;
 }
 
 .primary-btn {
