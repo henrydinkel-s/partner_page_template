@@ -256,11 +256,12 @@ button {
 //Mask
 
 .mask {
-  max-width: $mob-width;
+  max-width: $mob-width + ($mob-margin * 2);
   height: 24px;
   position: fixed;
   background-color: $putty;
   margin: auto;
+  padding: 0 $mob-margin;
   top: 0;
   left: 0;
   right: 0;

@@ -225,11 +225,12 @@ button {
 }
 
 .mask {
-  max-width: 400px;
+  max-width: 432px;
   height: 24px;
   position: fixed;
   background-color: #f3f0ec;
   margin: auto;
+  padding: 0 16px;
   top: 0;
   left: 0;
   right: 0;
