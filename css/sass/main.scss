@@ -79,6 +79,27 @@ img {
   object-fit: cover;
 }
 
+// Links
+
+a:link,
+a:visited {
+  font-family: 'italian_plate_no1_expandedBd', sans-serif;
+  font-size: 1.7rem;
+  line-height: 2.4rem;
+  text-decoration: underline;
+  color: #8223fa;
+  padding-top: 20px;
+  display: block;
+}
+
+a:hover {
+  color: #38005c;
+}
+
+a:active {
+  color: #8223fa;
+}
+
 /* ==========================================================================
    Typography
    ========================================================================== */
@@ -155,6 +176,7 @@ button {
   width: 100%;
   display: block;
   border-radius: 12px;
+  margin-top: 16px;
 }
 
 .underline-cta {
