@@ -159,8 +159,8 @@ h5 span {
 }
 
 p {
-  font-size: 1.5rem;
-  line-height: 2.2rem;
+  font-size: 1.7rem;
+  line-height: 2.4rem;
   margin: 0px;
   color: $mono-dark;
 }
@@ -193,7 +193,6 @@ button {
 }
 
 .secondary-btn {
-  background: $white;
   height: 48px;
   padding: 8px 24px;
   color: $purple;
@@ -294,18 +293,11 @@ button {
   left: 0;
   right: 0;
   z-index: 2;
-
-  animation: scale 1s linear;
-  animation-play-state: paused;
-  animation-delay: calc(var(--scroll) * -2.8s);
-
-  animation-iteration-count: 1;
-  animation-fill-mode: both;
 }
 
 .inverted-border-radius-l {
   position: relative;
-  height: 100%;
+  height: 16px;
   width: 50%;
   background-color: $putty;
   display: inline-block;
@@ -325,7 +317,7 @@ button {
 
 .inverted-border-radius-r {
   position: relative;
-  height: 100%;
+  height: 16px;
   width: 50%;
   background-color: $putty;
   float: right;
@@ -354,9 +346,35 @@ button {
   overflow-x: hidden;
 }
 
+.header {
+  height: auto;
+  background: #f3f0ec;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation {
+  position: relative;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 3;
+}
+
+.navigation button {
+  width: auto;
+  margin-top: 16px;
+}
+.header img {
+  margin-top: 16px;
+}
+
 main {
   max-width: $mob-width;
-  margin: 24px auto;
+  margin: 80px auto;
 }
 
 .content-card {
@@ -369,6 +387,28 @@ main {
   width: 100%;
   text-align: center;
   padding: 24px 24px;
+}
+
+.content p {
+  padding: 0 32px 24px 32px;
+}
+
+.dark-p {
+  background: $darker-purple;
+  color: $white;
+}
+
+.dark-p h3 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.dark-p h1 {
+  color: $white;
+}
+
+.dark-p img {
+  margin-top: 32px;
 }
 
 .section-title {
@@ -386,15 +426,7 @@ main {
 
 .hero-image {
   width: 100%;
-  padding-bottom: 100%;
-  position: relative;
-  background-color: #2980b9;
-}
-
-.hero-image img {
-  width: 100%;
-  height: 100%;
-  position: absolute;
+  background-color: $darker-purple;
 }
 
 .article-image {
@@ -402,112 +434,105 @@ main {
   height: auto;
 }
 
-// Tabs
-
-label {
-  cursor: pointer;
-  user-select: none;
-  text-decoration: none;
-  display: inline-block;
-  color: $lighter-purple;
-}
-
-input[type='radio'] {
-  display: none;
-}
-
-label.nav {
+.brand-content {
+  border-radius: 24px;
+  background: $purple;
+  margin-bottom: $mob-margin;
+  overflow: auto;
+  width: 100%;
+  height: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  border-bottom: 2px solid $lighter-purple;
-  user-select: none;
-  padding-left: 0;
-  input[type='radio']:checked + .tab-page + & {
-    border-bottom: 2px solid $white;
-    font-weight: bold;
-    color: $white;
-  }
+}
+
+.brand-content h2 {
+  color: $white;
+  text-align: center;
 }
 
 // Tab content
 
 .content-tabs {
   border-radius: 24px;
-  background: $darker-purple;
+  background: $purple;
   margin-bottom: $mob-margin;
-  overflow: hidden;
-  display: grid;
+  overflow: auto;
   width: 100%;
-  height: auto;
-  padding-top: 16px;
-  grid-template-rows: 48px 1fr;
-  grid-template-columns: 1fr 1fr;
 }
 
-.tab-page > .content {
-  color: $white;
-  height: 100%;
+// Spend Mod
+
+.spend-content {
   position: relative;
-  border-bottom-right-radius: 24px;
-  border-bottom-left-radius: 24px;
-  display: flex;
-  flex-flow: wrap;
-  align-content: space-between;
-  justify-content: center;
-}
-
-.tab-page > .content > div {
   width: 100%;
+  height: 431px;
+  text-align: center;
+  padding: 24px 48px;
+  overflow: hidden;
+  // background: grey;
+  // background-image: url(../../img/bg-image.png);
+  // background-repeat: no-repeat;
+  // background-position: center center;
+  // background-size: cover;
+}
+.spend-content > button {
+  width: auto;
+  margin: 0 auto;
+  z-index: 2;
 }
 
-.tab-page ul {
-  text-align: left;
-  padding: 0;
-  margin-top: 40px;
-  list-style: none;
-}
-.tab-page ul li {
-  padding: 16px;
-  background: $white;
-  margin-bottom: 8px;
-  border-radius: 12px;
-}
-.tab-page ul li p span {
-  color: $dark-purple;
-  font-family: 'italian_plate_no1_expandedBd', sans-serif;
+.bg-pepper {
+  position: absolute;
+  top: 10px;
+  left: 20px;
 }
 
-.spend {
-  margin-right: 24px;
-}
-.collect {
-  margin-left: 24px;
-}
-
-.tab-page {
-  grid-column-start: 1;
-  grid-row-start: 2;
-  grid-column-end: span 2;
-  display: flex;
-  align-items: flex-start;
+.bg-popcorn {
+  position: absolute;
+  left: -60px;
+  bottom: -40px;
 }
 
-input[type='radio'] + .tab-page {
-  transition: transform 0.2s;
-  transform: translateX(100%);
+.bg-game {
+  position: absolute;
+  right: 0px;
+  top: 0px;
 }
 
-input[type='radio']:checked + .tab-page {
-  transform: translateX(0%);
-  .content > * {
-    opacity: 1;
-    transform: translateY(0px);
-  }
+.bg-headphones {
+  position: absolute;
+  right: -60px;
+  bottom: -30px;
+}
+
+// Spend slider
+.spend-slider {
+  margin-top: 150px;
+  max-width: 100%;
+  z-index: 2;
+}
+
+.slick-track {
+  overflow: hidden;
+}
+
+.text-box {
+  width: 300px;
+  height: auto;
+}
+.text-box h2 {
+  color: $white;
 }
 
 // Partner slider
+.spend-brands {
+  width: 100%;
+  height: auto;
+  padding: 16px 0 16px 16px;
+  background: $dark-purple;
+}
+
 .partner-slider {
   max-width: 100%;
 }
@@ -518,9 +543,9 @@ input[type='radio']:checked + .tab-page {
 
 .box {
   width: 150px;
-  height: 150px;
+  height: 80px;
   background: $white;
-  border-radius: 24px;
+  border-radius: 12px;
   margin: 0 8px;
   position: relative;
 }
@@ -532,32 +557,4 @@ input[type='radio']:checked + .tab-page {
   position: absolute;
   top: 0;
   bottom: 0;
-}
-
-/* ==========================================================================
-   Animation
-   ========================================================================== */
-
-// Mask scale animation
-@keyframes scale {
-  to {
-    height: 78px;
-  }
-}
-
-// Arrow move animation
-@keyframes move {
-  to {
-    margin-top: 0px;
-    margin-left: 0px;
-    background: none;
-  }
-}
-
-// Title fadeIn animation
-@keyframes fade {
-  to {
-    opacity: 1;
-    padding-top: 38px;
-  }
 }
